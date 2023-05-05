@@ -5,12 +5,12 @@ import { ShowCasePageComponent } from './page';
 const routes: Routes = [
   {
     path: '',
-    component: ShowCasePageComponent
-  }
+    component: ShowCasePageComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ShowCaseRoutingModule { }
+export class ShowCaseRoutingModule {}

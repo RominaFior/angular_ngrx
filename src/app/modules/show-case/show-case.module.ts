@@ -1,12 +1,14 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ShowCaseRoutingModule } from './show-case-routing.module';
-import { UiSearchComponent } from './components/ui-search/ui-search.component';
-import { UiFilterComponent } from './components/ui-filter/ui-filter.component';
-import { ShowCasePageComponent } from './page/show-case-page/show-case-page.component';
-import { UiItemComponent } from './components/ui-item/ui-item.component';
-import { UiBlockItemComponent } from './components/ui-block-item/ui-block-item.component';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {
+  UiBlockItemComponent,
+  UiFilterComponent,
+  UiItemComponent,
+  UiSearchComponent,
+} from './components';
+import { ShowCasePageComponent } from './page';
+import { ShowCaseRoutingModule } from './show-case-routing.module';
 
 @NgModule({
   declarations: [

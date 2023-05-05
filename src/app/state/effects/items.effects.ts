@@ -6,7 +6,7 @@ import { catchError, map, mergeMap } from 'rxjs/operators';
 
 @Injectable()
 export class ItemsEffects {
-
+  
   loadItems$ = createEffect(() =>
     this.actions$.pipe(
       ofType('[Item List] Load items'),

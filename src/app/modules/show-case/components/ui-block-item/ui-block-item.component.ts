@@ -10,6 +10,7 @@ import { AppState, selectItemsList } from 'src/app/state';
   styleUrls: ['./ui-block-item.component.css'],
 })
 export class UiBlockItemComponent implements OnInit {
+  
   items$: Observable<any> = new Observable();
 
   constructor( private store: Store<AppState>) {}
