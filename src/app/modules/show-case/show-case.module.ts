@@ -1,22 +1,20 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import {
-  UiBlockItemComponent,
-  UiFilterComponent,
-  UiItemComponent,
-  UiSearchComponent,
-} from './components';
-import { ShowCasePageComponent } from './page';
+import { CommonModule } from '@angular/common';
 import { ShowCaseRoutingModule } from './show-case-routing.module';
+import { UiSearchComponent } from './components/ui-search/ui-search.component';
+import { UiFilterComponent } from './components/ui-filter/ui-filter.component';
+import { ShowCasePageComponent } from './page/show-case-page/show-case-page.component';
+import { UiItemComponent } from './components/ui-item/ui-item.component';
+import { UiBlockItemComponent } from './components/ui-block-item/ui-block-item.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    ShowCasePageComponent,
-    UiBlockItemComponent,
-    UiFilterComponent,
-    UiItemComponent,
     UiSearchComponent,
+    UiFilterComponent,
+    ShowCasePageComponent,
+    UiItemComponent,
+    UiBlockItemComponent,
   ],
   imports: [CommonModule, ShowCaseRoutingModule, FormsModule],
 })

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { ItemModel } from 'src/app/core';
-import { ShowCaseService } from '../../services';
+import { selectLoading } from 'src/app/state';
+import { LoadItems } from 'src/app/state/actions/items.actions';
 
 @Component({
   selector: 'app-show-case-page',
@@ -9,14 +10,12 @@ import { ShowCaseService } from '../../services';
   styleUrls: ['./show-case-page.component.css'],
 })
 export class ShowCasePageComponent implements OnInit {
-  listItems: ItemModel[] = [];
-  listItems$: Observable<any> = new Observable();
+  loading$: Observable<boolean> = new Observable();
 
-  constructor(showCase: ShowCaseService) {}
+  constructor(private store: Store<any>) {}
 
   ngOnInit(): void {
-    this.loadData();
+    this.loading$ = this.store.select(selectLoading);
+    this.store.dispatch(LoadItems());
   }
-
-  loadData(): void {}
 }

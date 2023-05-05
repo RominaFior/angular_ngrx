@@ -7,7 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class UiItemComponent implements OnInit {
   @Input() item: any;
-  constructor() { }
+  constructor() { 
+
+  }
 
   ngOnInit(): void {
   }
